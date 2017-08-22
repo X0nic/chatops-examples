@@ -7,7 +7,7 @@ export default () =>
         rel="stylesheet"
         href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
         integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
-        crossorigin="anonymous"
+        crossOrigin="anonymous"
       />
       <title>ChatOps Examples</title>
     </Head>
@@ -23,7 +23,9 @@ export default () =>
       <div className="row">
         <div className="col-md-12">
           <h2>Screencasts</h2>
-          <p>Here is a screencast showing a bot built to download YouTube videos.</p>
+          <p>
+            Here is a screencast showing a bot built to download YouTube videos.
+          </p>
         </div>
       </div>
 
