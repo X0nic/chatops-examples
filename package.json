@@ -20,7 +20,15 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "heroku-postbuild": "next build"
+    "heroku-postbuild": "next build",
+    "docker:build": "docker build -t chatops .",
+    "docker:clean": "docker rm -f chatops || true",
+    "docker:run": "docker run -p 5001:3000 -d --name chatops chatops && npm run docker:logs",
+    "docker:stop": "docker stop chatops",
+    "docker:start": "docker start chatops && npm run docker:logs",
+    "docker:logs": "docker logs -f chatops",
+    "deploy": "npm run docker:build && npm run docker:clean && npm run docker:run",
+    "publish": "hyper load -l chatops && hyper restart chatops"
   },
   "author": "",
   "license": "ISC"
